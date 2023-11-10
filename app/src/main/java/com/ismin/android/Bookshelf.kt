@@ -12,6 +12,10 @@ class Bookshelf {
         storage[book.isbn] = book
     }
 
+    fun addBooks(books : List<Book>){
+        books.forEach{book -> addBook(book)}
+    }
+
     fun getBook(isbn: String): Book {
         val book = storage[isbn]
         if (book == null) {
